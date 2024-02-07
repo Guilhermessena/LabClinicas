@@ -6,6 +6,8 @@ import 'package:lab_clinicas_self_service/src/service/user_login_service.dart';
 import 'package:lab_clinicas_self_service/src/service/user_login_service_impl.dart';
 
 class LoginRouter extends FlutterGetItModulePageRouter {
+  const LoginRouter({super.key});
+
   @override
   List<Bind<Object>> get bindings => [
         Bind.lazySingleton<UserLoginService>(

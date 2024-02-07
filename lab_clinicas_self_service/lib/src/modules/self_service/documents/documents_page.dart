@@ -134,6 +134,7 @@ class _DocumentsPageState extends State<DocumentsPage> with MessageViewMixin {
                               fixedSize: const Size.fromHeight(48)),
                           onPressed: () {
                             controller.clearDocuments();
+                            setState(() {});
                           },
                           child: const Text('REMOVER TODAS'),
                         ),
@@ -147,7 +148,9 @@ class _DocumentsPageState extends State<DocumentsPage> with MessageViewMixin {
                             backgroundColor: LabClinicasTheme.orangeColor,
                             fixedSize: const Size.fromHeight(48),
                           ),
-                          onPressed: () {},
+                          onPressed: () async {
+                            await controller.finalize();
+                          },
                           child: const Text('FINALIZAR'),
                         ),
                       )
