@@ -7,7 +7,11 @@
         {
             "name": "lab_clinicas_adm",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "args": [
+                "--dart-define-from-file",
+                ".config/env.json"
+            ]
         },
         {
             "name": "lab_clinicas_adm (profile mode)",
